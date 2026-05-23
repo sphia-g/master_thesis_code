@@ -1,0 +1,134 @@
+# Hydra configuration for volume-wise 3D classification
+hydra:
+  run:
+    dir: ${hydra.runtime.cwd}/volume_wise/outputs/${now:%Y-%m-%d}/${now:%H-%M-%S}
+  sweep:
+    dir: ${hydra.runtime.cwd}/volume_wise/outputs/multirun/${now:%Y-%m-%d}/${now:%H-%M-%S}
+    subdir: ${hydra.job.num}
+
+# Dataset selection
+dataset:
+  name: naive40  # Options: 'naive40', 'brats'
+  
+  naive40:
+    mat_file: Naive40_export.mat
+
+  brats:
+    data_dir: MICCAI_BraTS_2019_Data_Training
+    name_mapping: MICCAI_BraTS_2019_Data_Training/name_mapping.csv
+    max_patients: 50
+
+data:
+  random_state: 42
+  n_folds: 5
+
+features:
+  tumor_only: true
+  # Required — no default. Set to (D, H, W) to resample all volumes to.
+  target_shape: [64, 64, 64]
+  naive40:
+    feature_cols:
+      - ADC
+      - ADC_K
+      - Darkfluid
+      #- PET_late
+      - T1_mprage
+      - T1_mprageKM
+      - T2
+      #- PET_dynamic
+      #- PETwashinslope
+      #- PETwashin_intercept
+      #- PETwashoutslope
+      #- PETwashout_intercept
+      #- PETIntegral
+      #- PET_TTP
+  brats:
+    feature_cols:
+      - flair
+      - t1
+      - t1ce
+      - t2
+
+model:
+  type: volume_cnn
+
+  volume_cnn:
+    backbone: medicalnet
+    model_depth: 10
+    pretrained: true
+    pretrained_path: volume_wise/backbones/medicalnet/pretrain/resnet_10.pth
+    freeze_backbone: true
+    use_channel_adapter: true
+    selection_method: manual
+    selected_indices: [0]
+    extract_layer: avgpool
+
+  classifier:
+    types: [mlp, logistic_regression, decision_tree, knn, svm, random_forest, gmm, majority, tabpfn]  # Options: mlp, logistic_regression, decision_tree, knn, svm, random_forest, gmm, majority, tabpfn
+    type: decision_tree  # mlp, logistic_regression, decision_tree, knn, svm, random_forest
+
+    mlp:
+      hidden_layer_sizes: [128, 64]
+      alpha: 0.0001
+
+    logistic_regression:
+      weight_decay: 5.0
+
+    decision_tree:
+      depth: 5
+
+    knn:
+      k: 5
+
+    svm:
+      C: 1.0
+      kernel: linear
+      gamma: auto
+
+    random_forest:
+      n_estimators: 100
+      depth: 10
+      max_features: sqrt
+      bootstrap: true
+
+    gmm:
+      n_components_per_class: 3
+      covariance_type: diag
+      max_iter: 100
+      tol: 0.001
+      reg_covar: 0.000001
+
+    majority: {}
+
+    tabpfn:
+      batch_size: 5000
+      ignore_pretraining_limits: true
+
+# Optional phase-2 fine-tuning from prior fold checkpoints.
+# Set checkpoint_path to the .pth of any fold from a Phase 1 run (the loader
+# resolves the other folds automatically). Leave commented out for Phase 1.
+phase2:
+  checkpoint_path: volume_wise/outputs/multirun/2026-05-16/11-42-18/0/checkpoint_fold_2.pth
+  unfreeze_n_blocks: 2       # 0=adapter+head only, 1=layer4, 2=layer3+4, -1=all
+  learning_rate: 0.0001
+  num_epochs: 30
+  batch_size: 2
+
+# Runtime
+train:
+  seed: 42
+  num_epochs: 20
+  learning_rate: 0.0001
+  batch_size: 2
+  inference_batch_size: 4
+  device: cuda
+  log_interval: 5
+  use_class_balancing: false
+  lr_scheduler:
+    enabled: false
+    type: ExponentialLR
+    gamma: 0.98
+  class_weights:
+    naive32: null
+    naive40: null
+    brats: auto

@@ -1,0 +1,84 @@
+dataset:
+  name: brats
+  naive40:
+    mat_file: Naive40_export.mat
+  brats:
+    data_dir: MICCAI_BraTS_2019_Data_Training
+    name_mapping: MICCAI_BraTS_2019_Data_Training/name_mapping.csv
+data:
+  random_state: 42
+  n_folds: 5
+features:
+  tumor_only: true
+  naive40:
+    feature_cols:
+    - ADC
+    - ADC_K
+    - Darkfluid
+    - PET_late
+    - T1_mprage
+    - T1_mprageKM
+    - T2
+    - PET_dynamic
+    - PETwashinslope
+    - PETwashin_intercept
+    - PETwashoutslope
+    - PETwashout_intercept
+    - PETIntegral
+    - PET_TTP
+  brats:
+    feature_cols:
+    - flair
+    - t1
+    - t1ce
+    - t2
+  sample_ratio: 0.1
+hybrid_clustering:
+  enabled: true
+  method: kmeans
+  n_clusters: 3
+  find_optimal_k: false
+  k_range:
+  - 2
+  - 8
+  criterion: percentage_diff
+  min_cluster_voxels: 10
+model:
+  type: tabpfn
+  mlp:
+    hidden_layer_sizes:
+    - 64
+    - 32
+    alpha: 0.01
+  logistic_regression:
+    weight_decay: 5.0
+  decision_tree:
+    depth: 3
+  knn:
+    k: 5
+  svm:
+    C: 1.0
+    kernel: linear
+    gamma: auto
+  random_forest:
+    n_estimators: 100
+    depth: 10
+    max_features: sqrt
+    bootstrap: true
+  gmm:
+    n_components_per_class: 3
+    covariance_type: diag
+    max_iter: 100
+    tol: 0.001
+    reg_covar: 1.0e-06
+  majority: {}
+  tabpfn:
+    batch_size: 5000
+    ignore_pretraining_limits: true
+patient_aggregation: majority
+mil:
+  epochs: 50
+  lr: 0.01
+train:
+  seed: 420
+  device: cuda

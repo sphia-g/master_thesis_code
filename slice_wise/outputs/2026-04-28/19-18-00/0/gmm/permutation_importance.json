@@ -1,0 +1,1402 @@
+{
+  "method": "permutation",
+  "granularity": "slice-wise",
+  "classifier_type": "gmm",
+  "n_repeats": 5,
+  "fold_results": [
+    {
+      "fold": 1,
+      "importance": {
+        "baseline_score": 0.5,
+        "n_repeats": 5,
+        "feature_names": [
+          "PET_late",
+          "PET_dynamic_t0",
+          "PET_dynamic_t1",
+          "PET_dynamic_t2",
+          "PET_dynamic_t3",
+          "PET_dynamic_t4",
+          "PET_dynamic_t5",
+          "PET_dynamic_t6",
+          "PET_dynamic_t7",
+          "PET_dynamic_t8",
+          "PET_dynamic_t9",
+          "PET_dynamic_t10",
+          "PET_dynamic_t11",
+          "PET_dynamic_t12",
+          "PET_dynamic_t13",
+          "PET_dynamic_t14",
+          "PET_dynamic_t15",
+          "PETwashinslope",
+          "PETwashin_intercept",
+          "PETwashoutslope",
+          "PETwashout_intercept",
+          "PETIntegral",
+          "PET_TTP"
+        ],
+        "feature_groups": [
+          "PET_late",
+          "PET_dynamic",
+          "PET_dynamic",
+          "PET_dynamic",
+          "PET_dynamic",
+          "PET_dynamic",
+          "PET_dynamic",
+          "PET_dynamic",
+          "PET_dynamic",
+          "PET_dynamic",
+          "PET_dynamic",
+          "PET_dynamic",
+          "PET_dynamic",
+          "PET_dynamic",
+          "PET_dynamic",
+          "PET_dynamic",
+          "PET_dynamic",
+          "PETwashinslope",
+          "PETwashin_intercept",
+          "PETwashoutslope",
+          "PETwashout_intercept",
+          "PETIntegral",
+          "PET_TTP"
+        ],
+        "importance": [
+          {
+            "feature_group": "PET_late",
+            "feature_names": [
+              "PET_late"
+            ],
+            "feature_indices": [
+              0
+            ],
+            "n_features": 1,
+            "mean_importance": 0.0,
+            "std_importance": 0.0,
+            "repeats": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "feature_group": "PET_dynamic",
+            "feature_names": [
+              "PET_dynamic_t0",
+              "PET_dynamic_t1",
+              "PET_dynamic_t2",
+              "PET_dynamic_t3",
+              "PET_dynamic_t4",
+              "PET_dynamic_t5",
+              "PET_dynamic_t6",
+              "PET_dynamic_t7",
+              "PET_dynamic_t8",
+              "PET_dynamic_t9",
+              "PET_dynamic_t10",
+              "PET_dynamic_t11",
+              "PET_dynamic_t12",
+              "PET_dynamic_t13",
+              "PET_dynamic_t14",
+              "PET_dynamic_t15"
+            ],
+            "feature_indices": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16
+            ],
+            "n_features": 16,
+            "mean_importance": 0.0,
+            "std_importance": 0.0,
+            "repeats": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "feature_group": "PETwashinslope",
+            "feature_names": [
+              "PETwashinslope"
+            ],
+            "feature_indices": [
+              17
+            ],
+            "n_features": 1,
+            "mean_importance": 0.0,
+            "std_importance": 0.0,
+            "repeats": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "feature_group": "PETwashin_intercept",
+            "feature_names": [
+              "PETwashin_intercept"
+            ],
+            "feature_indices": [
+              18
+            ],
+            "n_features": 1,
+            "mean_importance": 0.0,
+            "std_importance": 0.0,
+            "repeats": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "feature_group": "PETwashoutslope",
+            "feature_names": [
+              "PETwashoutslope"
+            ],
+            "feature_indices": [
+              19
+            ],
+            "n_features": 1,
+            "mean_importance": 0.0,
+            "std_importance": 0.0,
+            "repeats": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "feature_group": "PETwashout_intercept",
+            "feature_names": [
+              "PETwashout_intercept"
+            ],
+            "feature_indices": [
+              20
+            ],
+            "n_features": 1,
+            "mean_importance": 0.0,
+            "std_importance": 0.0,
+            "repeats": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "feature_group": "PETIntegral",
+            "feature_names": [
+              "PETIntegral"
+            ],
+            "feature_indices": [
+              21
+            ],
+            "n_features": 1,
+            "mean_importance": 0.0,
+            "std_importance": 0.0,
+            "repeats": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "feature_group": "PET_TTP",
+            "feature_names": [
+              "PET_TTP"
+            ],
+            "feature_indices": [
+              22
+            ],
+            "n_features": 1,
+            "mean_importance": 0.0,
+            "std_importance": 0.0,
+            "repeats": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fold": 2,
+      "importance": {
+        "baseline_score": 0.5,
+        "n_repeats": 5,
+        "feature_names": [
+          "PET_late",
+          "PET_dynamic_t0",
+          "PET_dynamic_t1",
+          "PET_dynamic_t2",
+          "PET_dynamic_t3",
+          "PET_dynamic_t4",
+          "PET_dynamic_t5",
+          "PET_dynamic_t6",
+          "PET_dynamic_t7",
+          "PET_dynamic_t8",
+          "PET_dynamic_t9",
+          "PET_dynamic_t10",
+          "PET_dynamic_t11",
+          "PET_dynamic_t12",
+          "PET_dynamic_t13",
+          "PET_dynamic_t14",
+          "PET_dynamic_t15",
+          "PETwashinslope",
+          "PETwashin_intercept",
+          "PETwashoutslope",
+          "PETwashout_intercept",
+          "PETIntegral",
+          "PET_TTP"
+        ],
+        "feature_groups": [
+          "PET_late",
+          "PET_dynamic",
+          "PET_dynamic",
+          "PET_dynamic",
+          "PET_dynamic",
+          "PET_dynamic",
+          "PET_dynamic",
+          "PET_dynamic",
+          "PET_dynamic",
+          "PET_dynamic",
+          "PET_dynamic",
+          "PET_dynamic",
+          "PET_dynamic",
+          "PET_dynamic",
+          "PET_dynamic",
+          "PET_dynamic",
+          "PET_dynamic",
+          "PETwashinslope",
+          "PETwashin_intercept",
+          "PETwashoutslope",
+          "PETwashout_intercept",
+          "PETIntegral",
+          "PET_TTP"
+        ],
+        "importance": [
+          {
+            "feature_group": "PET_late",
+            "feature_names": [
+              "PET_late"
+            ],
+            "feature_indices": [
+              0
+            ],
+            "n_features": 1,
+            "mean_importance": 0.0,
+            "std_importance": 0.0,
+            "repeats": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "feature_group": "PET_dynamic",
+            "feature_names": [
+              "PET_dynamic_t0",
+              "PET_dynamic_t1",
+              "PET_dynamic_t2",
+              "PET_dynamic_t3",
+              "PET_dynamic_t4",
+              "PET_dynamic_t5",
+              "PET_dynamic_t6",
+              "PET_dynamic_t7",
+              "PET_dynamic_t8",
+              "PET_dynamic_t9",
+              "PET_dynamic_t10",
+              "PET_dynamic_t11",
+              "PET_dynamic_t12",
+              "PET_dynamic_t13",
+              "PET_dynamic_t14",
+              "PET_dynamic_t15"
+            ],
+            "feature_indices": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16
+            ],
+            "n_features": 16,
+            "mean_importance": 0.0,
+            "std_importance": 0.0,
+            "repeats": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "feature_group": "PETwashinslope",
+            "feature_names": [
+              "PETwashinslope"
+            ],
+            "feature_indices": [
+              17
+            ],
+            "n_features": 1,
+            "mean_importance": 0.0,
+            "std_importance": 0.0,
+            "repeats": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "feature_group": "PETwashin_intercept",
+            "feature_names": [
+              "PETwashin_intercept"
+            ],
+            "feature_indices": [
+              18
+            ],
+            "n_features": 1,
+            "mean_importance": 0.0,
+            "std_importance": 0.0,
+            "repeats": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "feature_group": "PETwashoutslope",
+            "feature_names": [
+              "PETwashoutslope"
+            ],
+            "feature_indices": [
+              19
+            ],
+            "n_features": 1,
+            "mean_importance": 0.0,
+            "std_importance": 0.0,
+            "repeats": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "feature_group": "PETwashout_intercept",
+            "feature_names": [
+              "PETwashout_intercept"
+            ],
+            "feature_indices": [
+              20
+            ],
+            "n_features": 1,
+            "mean_importance": 0.0,
+            "std_importance": 0.0,
+            "repeats": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "feature_group": "PETIntegral",
+            "feature_names": [
+              "PETIntegral"
+            ],
+            "feature_indices": [
+              21
+            ],
+            "n_features": 1,
+            "mean_importance": 0.0,
+            "std_importance": 0.0,
+            "repeats": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "feature_group": "PET_TTP",
+            "feature_names": [
+              "PET_TTP"
+            ],
+            "feature_indices": [
+              22
+            ],
+            "n_features": 1,
+            "mean_importance": 0.0,
+            "std_importance": 0.0,
+            "repeats": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fold": 3,
+      "importance": {
+        "baseline_score": 0.5,
+        "n_repeats": 5,
+        "feature_names": [
+          "PET_late",
+          "PET_dynamic_t0",
+          "PET_dynamic_t1",
+          "PET_dynamic_t2",
+          "PET_dynamic_t3",
+          "PET_dynamic_t4",
+          "PET_dynamic_t5",
+          "PET_dynamic_t6",
+          "PET_dynamic_t7",
+          "PET_dynamic_t8",
+          "PET_dynamic_t9",
+          "PET_dynamic_t10",
+          "PET_dynamic_t11",
+          "PET_dynamic_t12",
+          "PET_dynamic_t13",
+          "PET_dynamic_t14",
+          "PET_dynamic_t15",
+          "PETwashinslope",
+          "PETwashin_intercept",
+          "PETwashoutslope",
+          "PETwashout_intercept",
+          "PETIntegral",
+          "PET_TTP"
+        ],
+        "feature_groups": [
+          "PET_late",
+          "PET_dynamic",
+          "PET_dynamic",
+          "PET_dynamic",
+          "PET_dynamic",
+          "PET_dynamic",
+          "PET_dynamic",
+          "PET_dynamic",
+          "PET_dynamic",
+          "PET_dynamic",
+          "PET_dynamic",
+          "PET_dynamic",
+          "PET_dynamic",
+          "PET_dynamic",
+          "PET_dynamic",
+          "PET_dynamic",
+          "PET_dynamic",
+          "PETwashinslope",
+          "PETwashin_intercept",
+          "PETwashoutslope",
+          "PETwashout_intercept",
+          "PETIntegral",
+          "PET_TTP"
+        ],
+        "importance": [
+          {
+            "feature_group": "PET_late",
+            "feature_names": [
+              "PET_late"
+            ],
+            "feature_indices": [
+              0
+            ],
+            "n_features": 1,
+            "mean_importance": 0.0,
+            "std_importance": 0.0,
+            "repeats": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "feature_group": "PET_dynamic",
+            "feature_names": [
+              "PET_dynamic_t0",
+              "PET_dynamic_t1",
+              "PET_dynamic_t2",
+              "PET_dynamic_t3",
+              "PET_dynamic_t4",
+              "PET_dynamic_t5",
+              "PET_dynamic_t6",
+              "PET_dynamic_t7",
+              "PET_dynamic_t8",
+              "PET_dynamic_t9",
+              "PET_dynamic_t10",
+              "PET_dynamic_t11",
+              "PET_dynamic_t12",
+              "PET_dynamic_t13",
+              "PET_dynamic_t14",
+              "PET_dynamic_t15"
+            ],
+            "feature_indices": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16
+            ],
+            "n_features": 16,
+            "mean_importance": 0.0,
+            "std_importance": 0.0,
+            "repeats": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "feature_group": "PETwashinslope",
+            "feature_names": [
+              "PETwashinslope"
+            ],
+            "feature_indices": [
+              17
+            ],
+            "n_features": 1,
+            "mean_importance": 0.0,
+            "std_importance": 0.0,
+            "repeats": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "feature_group": "PETwashin_intercept",
+            "feature_names": [
+              "PETwashin_intercept"
+            ],
+            "feature_indices": [
+              18
+            ],
+            "n_features": 1,
+            "mean_importance": 0.0,
+            "std_importance": 0.0,
+            "repeats": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "feature_group": "PETwashoutslope",
+            "feature_names": [
+              "PETwashoutslope"
+            ],
+            "feature_indices": [
+              19
+            ],
+            "n_features": 1,
+            "mean_importance": 0.0,
+            "std_importance": 0.0,
+            "repeats": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "feature_group": "PETwashout_intercept",
+            "feature_names": [
+              "PETwashout_intercept"
+            ],
+            "feature_indices": [
+              20
+            ],
+            "n_features": 1,
+            "mean_importance": 0.0,
+            "std_importance": 0.0,
+            "repeats": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "feature_group": "PETIntegral",
+            "feature_names": [
+              "PETIntegral"
+            ],
+            "feature_indices": [
+              21
+            ],
+            "n_features": 1,
+            "mean_importance": 0.0,
+            "std_importance": 0.0,
+            "repeats": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "feature_group": "PET_TTP",
+            "feature_names": [
+              "PET_TTP"
+            ],
+            "feature_indices": [
+              22
+            ],
+            "n_features": 1,
+            "mean_importance": 0.0,
+            "std_importance": 0.0,
+            "repeats": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fold": 4,
+      "importance": {
+        "baseline_score": 0.5,
+        "n_repeats": 5,
+        "feature_names": [
+          "PET_late",
+          "PET_dynamic_t0",
+          "PET_dynamic_t1",
+          "PET_dynamic_t2",
+          "PET_dynamic_t3",
+          "PET_dynamic_t4",
+          "PET_dynamic_t5",
+          "PET_dynamic_t6",
+          "PET_dynamic_t7",
+          "PET_dynamic_t8",
+          "PET_dynamic_t9",
+          "PET_dynamic_t10",
+          "PET_dynamic_t11",
+          "PET_dynamic_t12",
+          "PET_dynamic_t13",
+          "PET_dynamic_t14",
+          "PET_dynamic_t15",
+          "PETwashinslope",
+          "PETwashin_intercept",
+          "PETwashoutslope",
+          "PETwashout_intercept",
+          "PETIntegral",
+          "PET_TTP"
+        ],
+        "feature_groups": [
+          "PET_late",
+          "PET_dynamic",
+          "PET_dynamic",
+          "PET_dynamic",
+          "PET_dynamic",
+          "PET_dynamic",
+          "PET_dynamic",
+          "PET_dynamic",
+          "PET_dynamic",
+          "PET_dynamic",
+          "PET_dynamic",
+          "PET_dynamic",
+          "PET_dynamic",
+          "PET_dynamic",
+          "PET_dynamic",
+          "PET_dynamic",
+          "PET_dynamic",
+          "PETwashinslope",
+          "PETwashin_intercept",
+          "PETwashoutslope",
+          "PETwashout_intercept",
+          "PETIntegral",
+          "PET_TTP"
+        ],
+        "importance": [
+          {
+            "feature_group": "PET_late",
+            "feature_names": [
+              "PET_late"
+            ],
+            "feature_indices": [
+              0
+            ],
+            "n_features": 1,
+            "mean_importance": 0.0,
+            "std_importance": 0.0,
+            "repeats": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "feature_group": "PET_dynamic",
+            "feature_names": [
+              "PET_dynamic_t0",
+              "PET_dynamic_t1",
+              "PET_dynamic_t2",
+              "PET_dynamic_t3",
+              "PET_dynamic_t4",
+              "PET_dynamic_t5",
+              "PET_dynamic_t6",
+              "PET_dynamic_t7",
+              "PET_dynamic_t8",
+              "PET_dynamic_t9",
+              "PET_dynamic_t10",
+              "PET_dynamic_t11",
+              "PET_dynamic_t12",
+              "PET_dynamic_t13",
+              "PET_dynamic_t14",
+              "PET_dynamic_t15"
+            ],
+            "feature_indices": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16
+            ],
+            "n_features": 16,
+            "mean_importance": 0.0,
+            "std_importance": 0.0,
+            "repeats": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "feature_group": "PETwashinslope",
+            "feature_names": [
+              "PETwashinslope"
+            ],
+            "feature_indices": [
+              17
+            ],
+            "n_features": 1,
+            "mean_importance": 0.0,
+            "std_importance": 0.0,
+            "repeats": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "feature_group": "PETwashin_intercept",
+            "feature_names": [
+              "PETwashin_intercept"
+            ],
+            "feature_indices": [
+              18
+            ],
+            "n_features": 1,
+            "mean_importance": 0.0,
+            "std_importance": 0.0,
+            "repeats": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "feature_group": "PETwashoutslope",
+            "feature_names": [
+              "PETwashoutslope"
+            ],
+            "feature_indices": [
+              19
+            ],
+            "n_features": 1,
+            "mean_importance": 0.0,
+            "std_importance": 0.0,
+            "repeats": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "feature_group": "PETwashout_intercept",
+            "feature_names": [
+              "PETwashout_intercept"
+            ],
+            "feature_indices": [
+              20
+            ],
+            "n_features": 1,
+            "mean_importance": 0.0,
+            "std_importance": 0.0,
+            "repeats": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "feature_group": "PETIntegral",
+            "feature_names": [
+              "PETIntegral"
+            ],
+            "feature_indices": [
+              21
+            ],
+            "n_features": 1,
+            "mean_importance": 0.0,
+            "std_importance": 0.0,
+            "repeats": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "feature_group": "PET_TTP",
+            "feature_names": [
+              "PET_TTP"
+            ],
+            "feature_indices": [
+              22
+            ],
+            "n_features": 1,
+            "mean_importance": 0.0,
+            "std_importance": 0.0,
+            "repeats": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fold": 5,
+      "importance": {
+        "baseline_score": 0.5,
+        "n_repeats": 5,
+        "feature_names": [
+          "PET_late",
+          "PET_dynamic_t0",
+          "PET_dynamic_t1",
+          "PET_dynamic_t2",
+          "PET_dynamic_t3",
+          "PET_dynamic_t4",
+          "PET_dynamic_t5",
+          "PET_dynamic_t6",
+          "PET_dynamic_t7",
+          "PET_dynamic_t8",
+          "PET_dynamic_t9",
+          "PET_dynamic_t10",
+          "PET_dynamic_t11",
+          "PET_dynamic_t12",
+          "PET_dynamic_t13",
+          "PET_dynamic_t14",
+          "PET_dynamic_t15",
+          "PETwashinslope",
+          "PETwashin_intercept",
+          "PETwashoutslope",
+          "PETwashout_intercept",
+          "PETIntegral",
+          "PET_TTP"
+        ],
+        "feature_groups": [
+          "PET_late",
+          "PET_dynamic",
+          "PET_dynamic",
+          "PET_dynamic",
+          "PET_dynamic",
+          "PET_dynamic",
+          "PET_dynamic",
+          "PET_dynamic",
+          "PET_dynamic",
+          "PET_dynamic",
+          "PET_dynamic",
+          "PET_dynamic",
+          "PET_dynamic",
+          "PET_dynamic",
+          "PET_dynamic",
+          "PET_dynamic",
+          "PET_dynamic",
+          "PETwashinslope",
+          "PETwashin_intercept",
+          "PETwashoutslope",
+          "PETwashout_intercept",
+          "PETIntegral",
+          "PET_TTP"
+        ],
+        "importance": [
+          {
+            "feature_group": "PET_late",
+            "feature_names": [
+              "PET_late"
+            ],
+            "feature_indices": [
+              0
+            ],
+            "n_features": 1,
+            "mean_importance": 0.0,
+            "std_importance": 0.0,
+            "repeats": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "feature_group": "PET_dynamic",
+            "feature_names": [
+              "PET_dynamic_t0",
+              "PET_dynamic_t1",
+              "PET_dynamic_t2",
+              "PET_dynamic_t3",
+              "PET_dynamic_t4",
+              "PET_dynamic_t5",
+              "PET_dynamic_t6",
+              "PET_dynamic_t7",
+              "PET_dynamic_t8",
+              "PET_dynamic_t9",
+              "PET_dynamic_t10",
+              "PET_dynamic_t11",
+              "PET_dynamic_t12",
+              "PET_dynamic_t13",
+              "PET_dynamic_t14",
+              "PET_dynamic_t15"
+            ],
+            "feature_indices": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16
+            ],
+            "n_features": 16,
+            "mean_importance": 0.0,
+            "std_importance": 0.0,
+            "repeats": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "feature_group": "PETwashinslope",
+            "feature_names": [
+              "PETwashinslope"
+            ],
+            "feature_indices": [
+              17
+            ],
+            "n_features": 1,
+            "mean_importance": 0.0,
+            "std_importance": 0.0,
+            "repeats": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "feature_group": "PETwashin_intercept",
+            "feature_names": [
+              "PETwashin_intercept"
+            ],
+            "feature_indices": [
+              18
+            ],
+            "n_features": 1,
+            "mean_importance": 0.0,
+            "std_importance": 0.0,
+            "repeats": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "feature_group": "PETwashoutslope",
+            "feature_names": [
+              "PETwashoutslope"
+            ],
+            "feature_indices": [
+              19
+            ],
+            "n_features": 1,
+            "mean_importance": 0.0,
+            "std_importance": 0.0,
+            "repeats": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "feature_group": "PETwashout_intercept",
+            "feature_names": [
+              "PETwashout_intercept"
+            ],
+            "feature_indices": [
+              20
+            ],
+            "n_features": 1,
+            "mean_importance": 0.0,
+            "std_importance": 0.0,
+            "repeats": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "feature_group": "PETIntegral",
+            "feature_names": [
+              "PETIntegral"
+            ],
+            "feature_indices": [
+              21
+            ],
+            "n_features": 1,
+            "mean_importance": 0.0,
+            "std_importance": 0.0,
+            "repeats": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "feature_group": "PET_TTP",
+            "feature_names": [
+              "PET_TTP"
+            ],
+            "feature_indices": [
+              22
+            ],
+            "n_features": 1,
+            "mean_importance": 0.0,
+            "std_importance": 0.0,
+            "repeats": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "summary": {
+    "n_folds": 5,
+    "baseline_score_mean": 0.5,
+    "baseline_score_std": 0.0,
+    "importance": [
+      {
+        "feature_group": "PET_late",
+        "feature_names": [
+          "PET_late"
+        ],
+        "feature_indices": [
+          0
+        ],
+        "n_features": 1,
+        "mean_importance": 0.0,
+        "std_importance": 0.0,
+        "fold_mean_importances": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "feature_group": "PET_dynamic",
+        "feature_names": [
+          "PET_dynamic_t0",
+          "PET_dynamic_t1",
+          "PET_dynamic_t2",
+          "PET_dynamic_t3",
+          "PET_dynamic_t4",
+          "PET_dynamic_t5",
+          "PET_dynamic_t6",
+          "PET_dynamic_t7",
+          "PET_dynamic_t8",
+          "PET_dynamic_t9",
+          "PET_dynamic_t10",
+          "PET_dynamic_t11",
+          "PET_dynamic_t12",
+          "PET_dynamic_t13",
+          "PET_dynamic_t14",
+          "PET_dynamic_t15"
+        ],
+        "feature_indices": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16
+        ],
+        "n_features": 16,
+        "mean_importance": 0.0,
+        "std_importance": 0.0,
+        "fold_mean_importances": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "feature_group": "PETwashinslope",
+        "feature_names": [
+          "PETwashinslope"
+        ],
+        "feature_indices": [
+          17
+        ],
+        "n_features": 1,
+        "mean_importance": 0.0,
+        "std_importance": 0.0,
+        "fold_mean_importances": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "feature_group": "PETwashin_intercept",
+        "feature_names": [
+          "PETwashin_intercept"
+        ],
+        "feature_indices": [
+          18
+        ],
+        "n_features": 1,
+        "mean_importance": 0.0,
+        "std_importance": 0.0,
+        "fold_mean_importances": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "feature_group": "PETwashoutslope",
+        "feature_names": [
+          "PETwashoutslope"
+        ],
+        "feature_indices": [
+          19
+        ],
+        "n_features": 1,
+        "mean_importance": 0.0,
+        "std_importance": 0.0,
+        "fold_mean_importances": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "feature_group": "PETwashout_intercept",
+        "feature_names": [
+          "PETwashout_intercept"
+        ],
+        "feature_indices": [
+          20
+        ],
+        "n_features": 1,
+        "mean_importance": 0.0,
+        "std_importance": 0.0,
+        "fold_mean_importances": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "feature_group": "PETIntegral",
+        "feature_names": [
+          "PETIntegral"
+        ],
+        "feature_indices": [
+          21
+        ],
+        "n_features": 1,
+        "mean_importance": 0.0,
+        "std_importance": 0.0,
+        "fold_mean_importances": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "feature_group": "PET_TTP",
+        "feature_names": [
+          "PET_TTP"
+        ],
+        "feature_indices": [
+          22
+        ],
+        "n_features": 1,
+        "mean_importance": 0.0,
+        "std_importance": 0.0,
+        "fold_mean_importances": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    ]
+  }
+}
